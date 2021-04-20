@@ -7,15 +7,10 @@ import './Sidebar.css';
 const Sidebar = () => {
     return (
         <div className="sidebar" style={{ height: '100vh', maxWidth: '100%' }}>
-            <ul className="">
+            <ul className="pt-5 ps-3">
                 <li>
                     <Link to="/home" className="text-white">
                         <FontAwesomeIcon icon={faHome} /> <span>Home</span>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/dashboard" className="text-white">
-                        <FontAwesomeIcon icon={faGripHorizontal} /> <span>Dashboard</span>
                     </Link>
                 </li>
                 <li>
@@ -25,12 +20,12 @@ const Sidebar = () => {
                 </li>
                 <li>
                     <Link to="/manageService" className="text-white">
-                        <FontAwesomeIcon icon={faCartPlus} /> <span>Manage Service</span>
+                        <FontAwesomeIcon icon={faShoppingBag} /> <span>Manage Service</span>
                     </Link>
                 </li>
                 <li>
                     <Link to="/tripList" className="text-white">
-                        <FontAwesomeIcon icon={faShoppingBag} /> <span>Trip List</span>
+                        <FontAwesomeIcon icon={faCartPlus} /> <span>Trip List</span>
                     </Link>
                 </li>
                 <li>

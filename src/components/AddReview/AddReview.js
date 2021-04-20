@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 import Sidebar from '../Admin/Sidebar/Sidebar';
+import './AddReview.css';
 
 const AddReview = () => {
     const { register, handleSubmit } = useForm();
@@ -17,7 +18,7 @@ const AddReview = () => {
         };
         
 
-        const url = 'http://localhost:5000/AddReview';
+        const url = 'https://sleepy-forest-90646.herokuapp.com/AddReview';
         console.log(reviewData)
         fetch(url, {
             method: 'POST',
@@ -51,14 +52,14 @@ const AddReview = () => {
                 <div className="col-md-3">
                     <Sidebar></Sidebar>
                 </div>
-                <div className="col-md-9 text-center add-products">
-                    <h3>Add Review</h3>
+                <div className="col-md-9 text-center add-review">
+                    <h3 className="mt-5">Add Review</h3>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <input className="mt-5 p-2 rounded" placeholder="Your Compliment" {...register("review")} /><br/>
                         <input className="mt-3 p-2 rounded" placeholder="Your Name" {...register("name")} /><br/>
                         <input className="mt-3 p-2 rounded" placeholder=" Designation, Company's Name" {...register("designation")} /><br/>
                         <input className="mt-3" type="file" onChange={handleImageUpload}/> <br/>
-                        <input className="mt-3 p-2 rounded" type="submit" />
+                        <input className="mt-3 p-2 rounded btn btn-info" type="submit" />
                     </form>
                 </div>
             </div>

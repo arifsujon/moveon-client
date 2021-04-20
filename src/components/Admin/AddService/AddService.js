@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 import Sidebar from '../Sidebar/Sidebar';
+import './AddService.css'
 
 const AddService = () => {
     const { register, handleSubmit } = useForm();
@@ -17,7 +18,7 @@ const AddService = () => {
         };
         
 
-        const url = 'http://localhost:5000/addService';
+        const url = 'https://sleepy-forest-90646.herokuapp.com/addService';
         console.log(serviceData)
         fetch(url, {
             method: 'POST',
@@ -51,14 +52,14 @@ const AddService = () => {
                 <div className="col-md-3">
                     <Sidebar></Sidebar>
                 </div>
-                <div className="col-md-9 text-center add-products">
-                    <h3>Add Service</h3>
+                <div className="col-md-9 text-center add-services">
+                    <h3 className="mt-5">Add Service</h3>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <input className="mt-5 p-2 rounded" placeholder="Service Title" {...register("title")} /><br/>
                         <input className="mt-3 p-2 rounded" placeholder="Service Fare" {...register("fare")} /><br/>
                         <input className="mt-3 p-2 rounded" placeholder="Service summary" {...register("summary")} /><br/>
                         <input className="mt-3" type="file" onChange={handleImageUpload}/> <br/>
-                        <input className="mt-3 p-2 rounded" type="submit" />
+                        <input className="mt-3 p-2 rounded btn btn-info" type="submit" />
                     </form>
                 </div>
             </div>

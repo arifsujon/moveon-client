@@ -6,7 +6,7 @@ const ManageService = () => {
     const [services, setServices] = useState([])
     console.log(services);
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://sleepy-forest-90646.herokuapp.com/services')
         .then(res => res.json())
         .then(data => setServices(data))
     }, [])
@@ -18,10 +18,12 @@ const ManageService = () => {
                     <Sidebar></Sidebar>
                 </div>
                 <div className="col-md-9">
-                    <h3 className="mt-5 mb-5">Manage Service</h3>
-                    {
-                        services.map(service => <ManageServiceCard service={service} key={service._id}></ManageServiceCard>)
-                    }
+                    <div className="row">
+                        <h3 className="mt-5 mb-5 text-center">Manage Service</h3>
+                        {
+                            services.map(service => <ManageServiceCard service={service} key={service._id}></ManageServiceCard>)
+                        }
+                    </div>
                 </div>
             </div>
         </div>

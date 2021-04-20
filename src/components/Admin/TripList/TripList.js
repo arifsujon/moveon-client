@@ -8,7 +8,7 @@ const TripList = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     useEffect(() => {
-        fetch('http://localhost:5000/tripList?email='+loggedInUser.email)
+        fetch('https://sleepy-forest-90646.herokuapp.com/tripList?email='+loggedInUser.email)
         .then(res => res.json())
         .then(data => setTripList(data));
     }, [])
@@ -19,10 +19,12 @@ const TripList = () => {
                     <Sidebar></Sidebar>
                 </div>
                 <div className="col-md-9">
-                    <h3>Trip List</h3>
-                    {
-                        tripList.map(trip => <TripCard trip={trip} key={trip._id}></TripCard>)
-                    }
+                    <div className="row">
+                        <h3 className="mt-5 mb-5 text-center">Trip List</h3>
+                        {
+                            tripList.map(trip => <TripCard trip={trip} key={trip._id}></TripCard>)
+                        }
+                    </div>
                 </div>
             </div>
         </div>

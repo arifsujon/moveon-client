@@ -11,7 +11,7 @@ const CheckOut = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     useEffect( () => {
-        const url = `http://localhost:5000/services`
+        const url = `https://sleepy-forest-90646.herokuapp.com/services`
         fetch(url)
         .then(res => res.json())
         .then(data => {
@@ -24,7 +24,7 @@ const CheckOut = () => {
     const handleCheckOut = () => {
         const newHire = {...services, ...loggedInUser};
         // console.log(newOrder);
-        fetch('http://localhost:5000/hire', {
+        fetch('https://sleepy-forest-90646.herokuapp.com/hire', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json'},
             body: JSON.stringify(newHire)
