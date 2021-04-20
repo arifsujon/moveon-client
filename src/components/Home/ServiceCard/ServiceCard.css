@@ -1,0 +1,14 @@
+.buy-btn {
+    display: block;
+}
+.card:hover .buy-btn {
+    /* display: block; */
+    text-align: center;
+    
+}
+
+@media (max-width: 575.98px) { 
+    .service-card {
+        padding: 0 70px;
+    }
+}

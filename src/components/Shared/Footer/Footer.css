@@ -1,0 +1,38 @@
+.single-footer {
+    margin-top: 16px;
+}
+.single-footer h3 {
+    margin-bottom: 20px;
+}
+.footer-logo>h3>a {
+    text-decoration: none;
+}
+.quick-links {
+    width: 45%;
+    float: left;
+}
+.quick-links li a {
+    text-decoration: none;
+}
+.footer-social ul {
+    text-align: right;
+}
+.footer-social ul li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+@media (max-width: 575.98px) { 
+    .footer-top-area {
+        padding: 0 30px;
+    }
+    .copyright>p {
+        text-align:center;
+    }
+    .footer-social ul {
+        text-align: center;
+    }
+    .quick-links {
+        float: none;
+    }
+}

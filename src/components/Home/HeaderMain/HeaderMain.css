@@ -1,0 +1,11 @@
+.header-main-container {
+    height: 700px;
+}
+@media (max-width: 991.98px) {
+    .header-main-container {
+        height: 400px;
+    }
+    .banner-info {
+        display: none;
+    }
+}

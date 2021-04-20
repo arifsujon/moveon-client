@@ -1,0 +1,23 @@
+.about-list ul {
+    columns: 2;
+    margin: 0;
+    padding: 0;
+}
+.about-list ul li {
+    list-style-type: none;
+}
+@media (max-width: 575.98px) { 
+    .about-content>h2, .about-content>h5 {
+        text-align: center;
+    }
+    .about-content>p {
+        padding: 0 30px;
+    }
+    .about-list ul {
+        columns: 1;
+        padding: 0 30px;
+    }
+    .about-content {
+        margin-bottom: 30px;
+    }
+}

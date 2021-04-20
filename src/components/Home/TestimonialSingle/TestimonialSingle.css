@@ -1,0 +1,9 @@
+.testimonial-single {
+    background-color: brown;
+}
+@media (max-width: 575.98px) {
+    #testimonial {
+        margin-bottom: 20px;
+        padding: 0 70px;
+    }
+}
